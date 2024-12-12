@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>寻宝游戏</title>
+    <!-- 使用 Flask 的 url_for 函数引用静态文件 -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>寻宝游戏</h1>
+        
+        <!-- 玩家信息 -->
+        <div id="player-info">
+            <p>欢迎，<span id="player-nickname"></span>！</p>
+            <ul id="score-history"></ul>
+        </div>
+
+        <!-- 游戏状态 -->
+        <div id="game-status"></div>
+        
+        <!-- 游戏内容 -->
+        <div id="game-content"></div>
+        
+        <!-- 开始游戏按钮 -->
+        <button id="start-game">开始游戏</button>
+    </div>
+    
+    <!-- 使用 Flask 的 url_for 函数引用 JavaScript 文件 -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <!-- 为音乐文件创建一个全局变量 -->
+    <script>
+        window.musicUrl = "{{ url_for('static', filename='prologue.mp3') }}";
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+body {
+    margin: 0; /* 确保没有默认的边距 */
+    padding: 0; /* 确保没有默认的内边距 */
+    background-image: url("{{ url_for('static', filename='神庙.jpg') }}");
+    background-size: cover; /* 使背景图片铺满屏幕 */
+    background-position: center; /* 使背景图片居中显示 */
+    background-repeat: no-repeat; /* 防止背景图片重复 */
+    color: white; /* 设置文本颜色为白色，以适应深色背景 */
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(95, 57, 20, 0.8); /* 使用半透明背景色，以适应深色背景 */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#player-info, #game-status, #game-content {
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #867ae0;
+    border-radius: 5px;
+    background-color: rgba(76, 134, 204, 0.8); /* 使用半透明背景色，以适应深色背景 */
+    color: white; /* 设置文本颜色为白色，以适应深色背景 */
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4c86cc;
+    border: none;
+    border-radius: 5px;
+    color: white; /* 设置文本颜色为白色，以适应深色背景 */
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #3a6e99; /* 鼠标悬停时改变按钮背景色 */
+}
